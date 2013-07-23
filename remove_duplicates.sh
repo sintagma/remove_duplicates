@@ -37,7 +37,7 @@ printf %s "$files1" | while IFS= read -r filename1; do
 # Write result to file report            
                 echo "$filename1 and $filename2 are duplicates" >> remove_duplicates.txt
 # Delete duplicate file                
-                rm -rf "$filename1"
+                rm -iv "$filename1"
             fi
     #	    fi
     done
