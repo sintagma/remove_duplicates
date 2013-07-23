@@ -5,8 +5,13 @@
 # TODO: How to invoke paths with whitespaces from .sh; check against nested directories with whitespaces in their names (though I think it works)
 
 # Declare variables for the two directories to be compared and fill them with paths provided by user when invoking .sh
+<<<<<<< HEAD
 files_dir1="$1"
 files_dir2="$2"
+=======
+files_dir1=$1
+files_dir2=$2
+>>>>>>> fa18598bbc8be7a95c7be7e3418f9f76a06b4f6b
 
 # Set error messages when directories are not specified when invoking the .sh
 if [[ -z "$files_dir1" ]]; then
@@ -24,7 +29,11 @@ files2="$( find ${files_dir2} -type f )"
 # Create file report
 touch remove_duplicates.txt
 
+<<<<<<< HEAD
 # <<COMMENT_END
+=======
+
+>>>>>>> fa18598bbc8be7a95c7be7e3418f9f76a06b4f6b
 # Loop through each file in the first directory
 printf %s "$files1" | while IFS= read -r filename1; do
 # Compare it against each file in the second directory
@@ -38,7 +47,14 @@ printf %s "$files1" | while IFS= read -r filename1; do
 # Write result to file report            
                 echo "$filename1 and $filename2 are duplicates" >> remove_duplicates.txt
             fi
+<<<<<<< HEAD
     #	    fi
     done
 done
 # COMMENT_END
+=======
+    #      fi
+    done
+done
+
+>>>>>>> fa18598bbc8be7a95c7be7e3418f9f76a06b4f6b
